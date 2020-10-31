@@ -66,3 +66,24 @@ esac
 else
    echo "Employee Absent"
  fi
+#CALCULATE DAILY WAGE TILL CONDITION SATISFIED
+while [[ $totalEmployeeHours -le $NUMBER_OF_WORKING_HOURS &&
+			$totalWorkingDays -le $NUMBER_OF_WORKING_DAYS ]]
+do
+	((totalWorkingDays++))
+	randomShiftCheck=$((RANDOM%3))
+	case $randomShiftCheck in
+
+		$IS_FULL_TIME )
+			employeeHour=$((EMPLOYEE_HOUR_FULLTIME))
+			;;
+		$IS_PART_TIME )
+			employeeHour=$((EMPLOYEE_HOUR_PARTTIME))
+			;;
+		* )
+			employeeHour=0
+			;;
+	esac
+	totalEmployeeHours=$(($totalEmployeeHours + $employeeHour))
+	echo "To total employee hours :" $totalEmployeeHours	
+done
