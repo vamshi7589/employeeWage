@@ -87,3 +87,8 @@ do
 	totalEmployeeHours=$(($totalEmployeeHours + $employeeHour))
 	echo "To total employee hours :" $totalEmployeeHours	
 done
+ #TO PRINT AND STORE WAGES FOR A MONTH
+totalWageOfMonth=$(($(calculateWage $totalEmployeeHours)))
+echo "Total wage :"$totaleWageOfMonth
+echo "Daily wages: ${dailyWage[@]}"
+echo "Day:${!dailyWage[@]}"
