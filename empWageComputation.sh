@@ -62,3 +62,7 @@ case "$caseChoce" in
    *)echo "No choice"
       ;;
 esac
+
+else
+   echo "Employee Absent"
+ fi
