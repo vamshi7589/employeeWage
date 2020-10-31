@@ -1,4 +1,4 @@
-echo " welcome to employee wage computation "
+echo "** welcome to employee wage computation** "
 isPresent=1
 
 #TO VARIABLE
