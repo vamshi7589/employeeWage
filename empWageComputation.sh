@@ -11,6 +11,21 @@ then
 else
 	echo "Employee Absent"
 fi
+#CONSTANT
+WAGE_PER_HOUR=20
+IS_FULL_TIME=2
+IS_PART_TIME=1
+EMPLOYEE_HOUR_FULLTIME=8
+EMPLOYEE_HOUR_PARTTIME=4
+
+# USER INPUTE
+read -p "To number of working days :" NUMBER_OF_WORKING_DAYS
+read -p "To number of working hour :" NUMBER_OF_WORKING_HOURS
+
+#VARIABLE
+totalSalary=0
+totalEmployeeHours=0
+totalWorkingDays=0
 #TO FUNCTION CALCULATE EMPLOYEE WAGE
 function calculateDailyEmployeeWae(){
 	read -p "Assume Wage per hour is :" isWagePerHour "rupees"
@@ -67,7 +82,7 @@ else
    echo "Employee Absent"
  fi
 #CALCULATE DAILY WAGE TILL CONDITION SATISFIED
-while [[ $totalEmployeeHours -le $NUMBER_OF_WORKING_HOURS &&
+while [[ $totalEmployeeHours -le $NUMBER_OF_WORKING_HOURS ||
 			$totalWorkingDays -le $NUMBER_OF_WORKING_DAYS ]]
 do
 	((totalWorkingDays++))
