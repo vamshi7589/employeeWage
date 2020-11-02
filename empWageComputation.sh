@@ -52,7 +52,7 @@ then
 	echo "To calculate part time employee and wage :" $calculatePartTimeEmployeeWage "rupees"
 }
 #using use case statement  	
-case "$caseChoce" in
+case "$caseChoice" in
 	0) echo "To calculate Daily Employee Wage"
 		#TO FUNCTION CALCULATE EMPLOYEE WAGE
 		function calculateDailyEmployeeWae(){
@@ -77,10 +77,6 @@ case "$caseChoce" in
    *)echo "No choice"
       ;;
 esac
-
-else
-   echo "Employee Absent"
- fi
 #CALCULATE DAILY WAGE TILL CONDITION SATISFIED
 while [[ $totalEmployeeHours -le $NUMBER_OF_WORKING_HOURS ||
 			$totalWorkingDays -le $NUMBER_OF_WORKING_DAYS ]]
